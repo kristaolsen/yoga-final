@@ -1,0 +1,52 @@
+// Color variables
+
+$black: #000;
+$white: #FFF;
+$gunmetal: #232323;
+$darksmoke: #212121;
+$darkgrey: #333;
+$chalk: #DBDBDB;
+$lightgrey: #EEE;
+$slate: #616265;
+$cornflower: #3D5B6A;
+$rosybrown: #EEB4B4;
+$evergreen: #5F755E;
+$darkkiwi: #B5BA84;
+$olive: #808000;
+$greentea: #F7FEE6;
+$linen: #FDF8F2;
+$bluemist: #AFC8CF;
+$overcast: #E8E4DB;
+$sanddune: #C9A983;
+$surf: #81AFAD;
+
+$padding: 10px;
+$margin: 10px;
+
+$font-size: 13px;
+$font-family: 'Raleway', sans-serif;
+$line-height: 22px;
+
+$break-seven: 1050px;
+$break-six: 770px;
+$break-five: 750px;
+$break-four: 730px;
+$break-three: 450px;
+$break-two: 420px;
+$break-one: 321px;
+
+@import url('http://fonts.googleapis.com/css?family=Julius+Sans+One:400');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans+One:300,400,700,600');
+@import url('http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700,600');
+@import url('http://fonts.googleapis.com/css?family=PT+Sans:400,700');
+@import url('http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,800,700,900');
+@import url('normalize.css');
+
+body {
+	color: $gunmetal;
+	font-size: $font-size;
+	font-family: $font-family;
+	line-height: $line-height;
+	background: $linen;
+}
+

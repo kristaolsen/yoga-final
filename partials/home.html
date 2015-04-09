@@ -1,0 +1,134 @@
+﻿<!--SECTION ABOUT US -->
+
+	<section id="section1" class="cd-section">
+		<div class="container">
+          <div class="row">
+		    <div class="box-content">
+		        <h1> ABOUT US </h1>
+                <div class="col-md-4">
+                    <div class="box-text">
+                        <h2>EARN A GREAT LIVING TEACHING YOGA</h2>
+                        <p><span class="date-blog"><strong>If you've envisioned teaching, you've come to the right place.</strong></span></p>The yogic path is a soul filling, satisfying life journey. Located in the heart of Hell's Kitchen, we offer Vinyasa style yoga classes, private instruction, beginner workshops & teacher training. 
+                        Our 200-hour and 500-hour Teacher Teaching programs are Yoga Alliance® accredited schools. Join a program today for the best training in NYC.
+                         <a href="#teacher-training"><button type="button">LEARN MORE!</button></a> 
+
+                      
+                           
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="box-img">
+                        <img src="images/yoga-banner.jpg" alt="" />
+                        <h4>$99.00 For 2 MONTHS OF UNLIMITED YOGA
+  
+                           <h2>START YOUR JOURNEY TODAY</h2>
+                        <p><span class="date-blog"><strong>* First time students only</strong></span></p>
+                            Our classes offer a safe, nurturing and inspiring setting to begin your yoga journey. You will leave the class with an understanding basic yoga techniques and foundation poses to help you feel confident in a scheduled group class session.
+                           
+                                  <a href="#passes"><button type="button">SIGN UP NOW!</button></a> 
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="box-text">
+                        <h2>New to Yoga?</h2>
+                        <p><span class="date-blog"><strong>We Love Beginners</strong></span></p>
+                        Begin with our simple Yoga 101 Workshops led by expert teachers.
+                        You’ve heard about yoga, you know it’s supposed to be great for you ~ making you fit, flexible, focused, and stress free. If you don’t know where to begin, we’ll help guide you, step-by-step. We strongly recommend these workshops to begin to help ensure your journey starts from the most informed and empowered place possible.
+
+                        <a href="#beginners"><button type="button">LEARN MORE!</button></a> 
+                      
+                        
+                    </div>
+                 </div>
+             </div>
+               
+                
+
+      <!--SECTION TESTIMONIALS-->
+
+
+  <div class="parallax2">
+        <div class="overlay-white">
+            <div class="container">
+              <div class="row">
+               <div class="col-md-12">
+               <div id="owl-demo" class="owl-carousel owl-theme">
+ 
+                  <div class="item">
+                            <div class="carousel-desc">
+                               
+                                <h1>Testimonials</h1>
+                                <h3><strong>“Sonic Style is a joyful expression of life! It’s about the dance between mind, body, and spirit.</strong>  I feel at home at Sonic because I am free to express my natural energy, whatever it may be that day, without fear of judgment.  And it’s always a spiritual up-lifter, too!</h3>
+                                <h5>~ Kira S</h5>
+                        </div>
+                    </div>
+                    <div class="item">
+                            <div class="carousel-desc">
+                        
+                            <h1>Testimonials</h1>
+                                <h3><strong>“Practicing and teaching yoga at Sonic has and continues to inspire, transform, enlighten and enliven me!,</strong> The Sonic community is one of open minds, arms and most especially hearts…. it’s these qualities that make coming to Sonic feel like coming home!</h3>
+                                <h5>~ Linda Bloom</h5>
+                            </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-desc">
+                       
+                            <h1>Testimonials</h1>
+                            <h3><strong>“I’ve been coming to Sonic since it opened and never imagined then that I’d become a teacher myself!</strong>  Sonic has been my city sanctuary, my second home–an inclusive, nurturing, playful, loving community that has provided me with a grounding, heart-expanding, soul-stimulating, body-empowering, light-filled, calming, sacred place that has changed who I am for the better, forever.”</h3>
+                                <h5>~ Kiera N</h5>
+                        </div>
+                    </div>
+ 
+                </div>
+              </div>
+          </div>
+        </div>
+       </div>
+      </div>
+      </div>
+	</section><!-- cd-section -->
+
+    
+    <script>
+        /********************************************
+        CAROUSEL
+        ********************************************/
+        $("#owl-demo").owlCarousel({
+
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true
+
+            // "singleItem:true" is a shortcut for:
+            // items : 1, 
+            // itemsDesktop : false,
+            // itemsDesktopSmall : false,
+            // itemsTablet: false,
+            // itemsMobile : false
+
+        });
+    </script>
+    <script>
+        $('.albumFilter li').on("click", function () {
+            $('.albumFilter .current').removeClass('current');
+            $(this).addClass('current');
+        });
+    </script>
+
+    <script type="text/javascript">
+        /********************************************
+        CLOSE PAGE DETAIL
+        ********************************************/
+//        $(document).ready(function () {
+        $(".smooth-redirect").on("click", function (event) {
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(1000, redirectPage);
+            });
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+//        });
+   </script>
+    

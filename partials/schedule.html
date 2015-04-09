@@ -1,0 +1,194 @@
+<!--SECTION SCHEDULE-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+</head>
+<body>
+
+<a id="class_schedule"></a>
+<div></div>
+
+<!-- SCHEDULER -->
+<section id="schedule" class="section-block" ng-controller="YogaClassCtrl"><!-- title -->
+	<div class="row">
+	  <div class="col-md-12">
+	    <div class="title">
+	    
+	      <h4>Find out which classes are right for you!</h4>
+	    </div><!-- title -->
+	  </div><!-- col-md-12 -->
+	</div><!-- row -->
+
+	<div class="row">
+	  <div class="col-md-3">
+	    <div class="search">
+	      
+	      <!-- FILTERING -->
+	      <div class="preference-filter text-field-filter">
+	        <label>Day</label>
+	        <div class="row">
+	          <div class="col-md-12">
+	            <input type="text" ng-model="filter.day" placeholder="Day of the Week">
+	          </div>
+	        </div>
+	      </div>
+	      <div class="preference-filter">
+	        <label>Class</label>
+	        <div class="row">
+	          <div class="col-md-12">
+	            <input type="checkbox" ng-model="classNames.allLevelsFlowClass"> All Levels Flow
+	          </div>
+	          <div class="col-md-12">
+	            <input type="checkbox" ng-model="classNames.levelOneClass"> Level I
+	          </div>
+	          <div class="col-md-12">
+	            <input type="checkbox" ng-model="classNames.levelTwoClass"> Level II
+	          </div>
+	        </div>
+	      </div>
+	      <div class="preference-filter text-field-filter">
+	        <label>Teacher</label>
+	        <div class="row">
+	          <div class="col-md-12">
+	            <input type="text" ng-model="filter.teacher" placeholder="Name of Teacher">
+	          </div>
+	        </div>
+	      </div>
+	      <div class="preference-filter">
+	        <label>Studio</label>
+	        <div class="row">
+	          <div class="col-md-6">
+	            <input type="checkbox" ng-model="studios.hellsKitchen">
+	            Hells Kitchen 
+	          </div>
+	          <div class="col-md-6">
+	            <input type="checkbox" ng-model="studios.brooklyn"> Brooklyn
+	          </div>
+	        </div>
+	      </div>
+	      <div class="preference-filter last-item">
+	        <label>Level</label>
+	        <div class="row">
+	          <div class="col-md-4">
+	            <input type="checkbox" ng-model="levels.allLevels"> All
+	          </div>
+	          <div class="col-md-4">
+	            <input type="checkbox" ng-model="levels.levelOne"> I
+	          </div>
+	          <div class="col-md-4">
+	            <input type="checkbox" ng-model="levels.levelTwo"> II
+	          </div>
+	        </div>
+	      </div>
+
+	    </div><!-- SEARCH -->
+	  </div><!-- col-md-3 -->
+
+	  <div class="col-md-9">
+	    <table class="table table-bordered table-striped table-hover">
+	      <tbody>
+	        <tr>
+	          <th>Begins</th>
+	          <th>Ends</th>
+	          <th>Day</th>
+	          <th>Class</th>
+	          <th>Teacher</th>
+	          <th>Studio</th>
+	          <th>Level</th>
+	        </tr>
+	        <tr ng-repeat="yogaClass in classes | filter:query | orderBy:dayNumber | filter:{day: filter.day} | filter:{teacher: filter.teacher} | classNameFilter:classNames | studioFilter:studios | levelFilter:levels">
+	          <td>{{yogaClass.startTime}}</td>
+	          <td>{{yogaClass.endTime}}</td>
+	          <td>{{yogaClass.day}}</td>
+	          <td><a href="#/classes/{{yogaClass.id}}">{{yogaClass.yogaClassName}}</a></td>
+	          <td>{{yogaClass.teacher}}</td>
+	          <td>{{yogaClass.studio}}</td>
+	          <td>{{yogaClass.level}}</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </div><!-- col-md-9 -->
+	</div><!-- row -->
+  
+</section><!-- SUMMER OFFERS -->
+
+  <section id="flow1" class="section-block container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="title">
+        <h1>Course Descriptions</h1>
+        <h2>Level 1</h2>
+        <span class="date-blog">Advanced Beginner to Intermediate</span><br>
+This practice creates a balance of heat and calm. It begins with an opening focus and a gentle warm-up then moves into a moderately-paced standing flow. Expect moments of adventure as you begin exploring more complex peak postures. You’ll return to the mat to balance your practice with savasana and meditation. It is a stilling journey that leaves you refreshed and restored.
+
+
+ <div class="row">
+    <div class="col-md-12">
+      <div class="title">
+
+ 
+        <h2>All Levels</h2>
+        <span class="date-blog">Intermediate</span><br>
+This blended class provides is a intelligent multi-level experience. Beginning with an opening focus and breath work, it moves on to flowing postures with plenty of opportunities to discover a peaceful edge and sense of adventure. A delicious dissolve culminates in savansana and meditation. Expect to cultivate a purifying heat in the body as you and leave inspired and alive.</p> 
+
+ <div class="row">
+    <div class="col-md-12">
+      <div class="title">
+
+<h2>Level 2</h2>
+ <span class="date-blog">Intermediate</span><br>
+This powerful, often sweat drenching practice cultivates cleansing heat in the body and builds strength, stamina and focus. Flow 2 begins standing and moves into a 50-minute dynamic standing flow, incorporating a wide-range of arm-balances and “sense of adventure poses.” The pace is brisk, yet intelligent, and the intensity and heat come more from the pace than from the holds or complexity. From here, we move to the mat for deeper, longer forward, back and hip-opening postures, 5-minutes of dynamic core work and deliver you into a scrumptious savasana and final meditation. Flow 2 is a vibrant journey that leaves you refreshed, inspired and alive.</p>
+      </div><!-- title -->
+    </div><!-- col-md-12 -->
+  </div><!-- row -->
+
+
+
+  	<section id="section2" class="cd-section">
+		<div class="container">
+          <div class="row">
+		    <div class="box-content">
+                <div class="col-md-4">
+                    <div class="box-text">
+                    	 <img src="images/yoga-pose-one.jpg">
+                        <h2>2 month trial for new members</h2>
+                        Are you new to yoga? Want to try our classes without making a long term commitment?
+                        <a href="#passes"><button type="button">Learn More</button></a> 
+
+
+
+                          </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="box-text">
+                        <img src="images/yoga-stock-photo-4.jpg" alt="" />
+
+                           <h2>PRICING</h2>
+                        <p><span class="date-blog"><strong>A joyful investment in your mind, body, and spirit</strong></span></p>
+                            * New monthly member <strong>$75</strong><br>
+                           * 2 Months Unlimited Yoga <strong>$99</strong><br>
+                              * Drop in <strong>$20</strong><br>
+                                * Monthly Auto Renewing <strong>$99</strong>
+                            
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="box-text">
+                    	 <img src="images/yoga-pose-two.jpg">
+                        <h2>10 class pass for only $99</h2>
+                        Our annual summer promotion! Strike a balance between your summer activities & maintaining a regular yoga practice.
+                       <a href="#passes"><button type="button">Learn More</button></a> 
+                        
+                    </div>
+                 </div>
+             </div>
+   
+</section><!-- Contact -->
+
+
+
+<script type="text/javascript">
+</body>
+</html>
