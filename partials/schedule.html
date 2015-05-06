@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0">
 </head>
-<body>
+
+<body ng-app="yogaClassControllers">
 
 <a id="class_schedule"></a>
 <div></div>
@@ -27,7 +28,7 @@
 	      
 	      <!-- FILTERING -->
 	      <div class="preference-filter text-field-filter">
-	        <label>Day</label>
+	        <label>Day:</label>
 	        <div class="row">
 	          <div class="col-md-12">
 	            <input type="text" ng-model="filter.day" placeholder="Day of the Week">
@@ -35,7 +36,7 @@
 	        </div>
 	      </div>
 	      <div class="preference-filter">
-	        <label>Class</label>
+	        <label>Class:</label>
 	        <div class="row">
 	          <div class="col-md-12">
 	            <input type="checkbox" ng-model="classNames.allLevelsFlowClass"> All Levels Flow
@@ -49,15 +50,16 @@
 	        </div>
 	      </div>
 	      <div class="preference-filter text-field-filter">
-	        <label>Teacher</label>
+	        <label>Teacher:</label>
 	        <div class="row">
 	          <div class="col-md-12">
 	            <input type="text" ng-model="filter.teacher" placeholder="Name of Teacher">
 	          </div>
 	        </div>
 	      </div>
+    
 	      <div class="preference-filter">
-	        <label>Studio</label>
+	        <label>Studio:</label>
 	        <div class="row">
 	          <div class="col-md-6">
 	            <input type="checkbox" ng-model="studios.hellsKitchen">
@@ -108,16 +110,22 @@
 	          <td>{{yogaClass.level}}</td>
 	        </tr>
 	      </tbody>
-	    </table>
 	  </div><!-- col-md-9 -->
 	</div><!-- row -->
+</div>
+</table>
+
   
 </section><!-- SUMMER OFFERS -->
 
-  <section id="flow1" class="section-block container">
-  <div class="row">
+
+  <section id="descriptions" class="section-block container">
+   <div class="row">
     <div class="col-md-12">
-      <div class="title">
+        <div class="title">
+    
+
+
         <h1>Course Descriptions</h1>
         <h2>Level 1</h2>
         <span class="date-blog">Advanced Beginner to Intermediate</span><br>
@@ -162,15 +170,15 @@ This powerful, often sweat drenching practice cultivates cleansing heat in the b
                           </div>
                  </div>
                  <div class="col-md-4">
-                    <div class="box-text">
+                    <div class="box-img">
                         <img src="images/yoga-stock-photo-4.jpg" alt="" />
-
-                           <h2>PRICING</h2>
+<h2>PRICING</h2>
                         <p><span class="date-blog"><strong>A joyful investment in your mind, body, and spirit</strong></span></p>
+                           * Drop in <strong>$20</strong><br>
                             * New monthly member <strong>$75</strong><br>
-                           * 2 Months Unlimited Yoga <strong>$99</strong><br>
-                              * Drop in <strong>$20</strong><br>
-                                * Monthly Auto Renewing <strong>$99</strong>
+                             * Monthly Auto Renewing <strong>$99</strong></br>
+                               * 10 Class Pass <strong>$175.00</strong></br>
+                           * 2 Months Unlimited Yoga <strong>$199</strong><br>
                             
                     </div>
                  </div>
@@ -178,17 +186,103 @@ This powerful, often sweat drenching practice cultivates cleansing heat in the b
                     <div class="box-text">
                     	 <img src="images/yoga-pose-two.jpg">
                         <h2>10 class pass for only $99</h2>
-                        Our annual summer promotion! Strike a balance between your summer activities & maintaining a regular yoga practice.
+                        Our annual summer promotion is here! Strike a balance between all of your summer activities and maintaining a consistent and regular yoga practice.<p>
+
                        <a href="#passes"><button type="button">Learn More</button></a> 
                         
                     </div>
                  </div>
              </div>
    
-</section><!-- Contact -->
+</section>
 
 
+<section id="passes" class="section-block container">
+	<div class="title row">
+		<h1>Passes & Rates</h1>
 
-<script type="text/javascript">
+		<h4>We offer a wide range of classes & levels.</h4><p>
+		<h4>Everyone has an opportunity to incorporate yoga<h4><p>
+		<h4> into their lifestyle.</h4>
+	</div>
+
+	<div class="memberships">
+		<div ng-controller="AccordionCtrl">
+		  <accordion close-others="oneAtATime">
+		  	<accordion-group heading="Month to Month" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+      		<p><h2>Monthly Unlimited</h2></p>
+      		 <span class="date-blog">Available for $105.</span><br>
+      		<h5>Enjoy unlimited yoga classes at both studio locations. There is no contract and membership fee is charged monthly to your credit card.<br>
+      		 This option is perfect for those who practice two times per week or more.</h5>
+      		<p class="buy-now"><a href="">Buy online now</a></p>
+    		</accordion-group>
+    		<accordion-group heading="Drop In">
+    		<p><h2>Drop In</h2></p>
+    		<span class="date-blog">Available for $20</span><br>
+      		<h5>A great option when you're just around for a day. No need to register or commit. Just show up!</h5>
+      		<ul>
+	      	
+	      	
+      		</ul>
+    		</accordion-group>
+    		<accordion-group heading="2 Month Trial for New Members">
+    			<p><h2>New Member Special</h2></p>
+    			<span class="date-blog">Available for $75.</span><br>
+      		<h5>An afforable way to get familiar with our studio and our variety of teachers and class styles.<br> First time students only, activates on the date of purchase.</h5>
+      		<p class="buy-now"><a href="">Buy online now</a></p>
+    		</accordion-group>
+    		<accordion-group heading="Class Pass">
+    			<p><h2>Class Passes</h2></p>
+      		<h5>Class passes are perfect for students who wish to take class once or twice a week.<br> Passes are valid for 6 months and may be used at both locations.</h5>
+      		<ul>
+	      		<li><span class="date-blog">$92.50</span> - 5 class pass - $18.50 per class, Expires 1 year after purchase</li>
+	      		<li><span class="date-blog">$175.00</span> - 10 class pass - $17.50 per class, per class, Expires 1 year after purchase</li>
+	      		<li><span class="date-blog">$99.00</span> - Monthly renewing - Best value! Free mat storage, 2 guest passes a year, 3 month commitment, 30 days notice required for freeze or cancellation</li>
+	      		<li><span class="date-blog">$69.00</span> - Senior/Student Monthly - Free mat storage, 2 guest passes a year, 3 month commitment (Only available in-person with valid ID), 30 days notice required for freeze or cancellation </li>
+	      		<li><span class="date-blog">Pay What You Can</span> - Recommended $5 donation</li>
+	      		<li><span class="date-blog">$150.00</span> - Single Month Unlimited </li></p>
+	      	</ul>
+      		<p class="buy-now"><a href="">Buy online now</a></p>
+    		</accordion-group>
+    		<accordion-group heading="Annual">
+    		 	<p><h2>Annual Membership</h2></p>
+    		 	<span class="date-blog">Available for $1044.</span><br>
+      		<h5>Our best value yet ~ as it works out to be $20.00 per week! If you practice more than twice a week, this package is the best value.</h5><br>
+      		<ul>
+	      		<li>A 12-month contract applies</li>
+	      		<li>Unlimited classes at both locations</li>
+	      	</ul></p>
+      		<p class="buy-now"><a href="">Buy online now</a></p>
+    		</accordion-group>
+		  </accordion>
+		</div>
+	</div><!-- memberships -->
+</section><!-- passes -->
+<!-- CSS animations -->
+<link href="css/animate.css" rel="stylesheet" type="text/css" />
+<link href="css/owl_carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+<link href="css/owl_carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+
+<!-- JavaScript -->
+<script src="js/utilities.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp" type="text/javascript"></script>
+
+<!-- jQuery -->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/owl_carousel/owl.carousel.js" type="text/javascript"></script>
+
+<!-- Angular JS -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular-animate.js"></script>
+
+<script src="js/ng-map.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+
 </body>
 </html>

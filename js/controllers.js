@@ -26,7 +26,7 @@ yogaClassControllers.controller('ScrollController', ['$scope', '$location', '$an
 
 yogaClassControllers.controller('YogaClassCtrl', ['$scope', '$http', 
 	function($scope, $http) {
-		$http.get('/api/yogaclasses').success(function(data) { .success(function(data) {*/
+		$http.get('http://yogaspascheduler.firebaseIO.com/yogaclasses').success(function(data) { .success(function(data) {*/
 			$scope.classes = data;
 		});
 
@@ -75,6 +75,37 @@ yogaClassControllers.controller('LocationMapCtrl', ['$scope',
 		};
 	}
 ]);
+
+/*****************************************************************
+		Passes & Rates Controller
+*****************************************************************/
+
+yogaClassControllers.controller('AccordionCtrl', ['$scope', 
+	function($scope) {
+	  $scope.oneAtATime = false;
+
+	  $scope.status = {
+	    isFirstOpen: true,
+	    isFirstDisabled: false
+	  };
+	}
+]);
+
+/*yogaClassControllers.controller('YogaClassDetailCtrl', ['$scope', '$routeParams',
+ 	function($scope, $routeParams) {
+ 			$scope.yogaClass = data;
+ }]);*/
+
+yogaClassControllers.controller('YogaClassDetailCtrl', ['$scope', '$routeParams', '$http', 
+	function($scope, $routeParams, $http) {
+		/*$http.get('classes/' + $routeParams.classId + '.json').success(function(data) {*/
+		$http.get('classes/all-levels-flow.json').success(function(data) {
+			console.log($scope.yogaClass = data);
+
+		});
+}]);
+
+
 
 
 

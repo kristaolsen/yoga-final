@@ -21,9 +21,9 @@ ol, ul {
 }
 h1 {
 	font-family: 'Julius Sans One', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    color: #81AFAD;
+  font-weight: 600;
+  font-size: 20px;
+  color: #81AFAD;
 	text-transform: uppercase;
 	text-align: center;
 	margin: 0px 0 50px 0;
@@ -60,16 +60,30 @@ h4 {
     font-size: 16px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: px;
+    margin-bottom: 30px;
     letter-spacing: 1px;
 }
 
 h5 {
-    color: #3D5B6A;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 500;
+    color: #232323;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 300;
     font-size: 13px;
+    line-height:22px;
     text-align: center;
+    line-height:22px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+h6 {
+    color: #3D5B6A;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height:22px;
+    text-align: center;
+    line-height:22px;
     margin-bottom: 5px;
     letter-spacing: 1px;
 }
@@ -168,6 +182,146 @@ header nav .menu li a{
 .prod-line {
 	padding-bottom: 30px;
 }
+
+/*************************************************
+		Base
+*************************************************/
+.section-block {
+  margin-top: 40px; }
+
+button {
+  background: none;
+  border: solid 1px;
+  letter-spacing: 2px;
+  min-width: 18em;
+  padding: 0.5em 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.title {
+  padding-bottom: 30px;
+  text-align: left; }
+
+#main {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+  /* For Angular Bootstrap */ }
+
+/*************************************************
+		Class Schedule
+*************************************************/
+section#schedule {
+  height: 600px;
+  padding-left: 80px;
+  padding-right: 80px; }
+
+#schedule .search {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #81AFAD;
+     border-radius: 5px;
+    border-bottom: 1px dotted #FFF;
+  color: #fff;
+  height: 100%;
+  text-align: left;
+  padding: 30px 0px; }
+  #schedule .search .preference-filter {
+    padding-bottom: 20px;
+    font-weight: 300; }
+    #schedule .search .preference-filter .row {
+      margin-left: 0;
+      margin-right: 0; }
+  #schedule .search .preference-filter.text-field-filter input {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    color: #000;
+    padding-left: 5px; }
+  #schedule .search .preference-filter.last-item {
+    padding-bottom: 0px; }
+#schedule label {
+  margin-left: 15px;
+  font-weight: 300;
+  text-decoration: underline; }
+#schedule a {
+  color: #000; }
+#schedule a:hover {
+  color: #ef5185;
+  text-decoration: none; }
+
+  /*************************************************
+		Offers
+*************************************************/
+#offers.container, #contact.container {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  color: #81AFAD;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  #offers.container img, #contact.container img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px; }
+  #offers.container h3, #offers.container p, #contact.container h3, #contact.container p {
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+    line-height: 1.6em;
+    letter-spacing: 0.025em; }
+  #offers.container h3, #contact.container h3 {
+    color: #9B90C8;
+    margin-top: 0px; }
+  #offers.container p, #contact.container p {
+    font-size: 16px; }
+  #offers.container a, #contact.container a {
+    text-decoration: none; }
+  #offers.container button, #contact.container button {
+    display: block;
+    margin: 18px auto;
+    text-transform: uppercase;
+    color: #7c8081; }
+    #offers.container button:hover, #contact.container button:hover {
+      background-color: #ef5185;
+      color: #fff;
+      transition: all 0.2s ease-in-out; }
+
+/*************************************************
+		Passes & Rates
+*************************************************/
+#passes h1 {
+  padding-bottom: 10px; }
+#passes .title h4, #passes .panel-group {
+  width: 650px;
+  display: block;
+  margin: 0 auto; }
+#passes .buy-now a {
+  color: #81AFAD;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline; }
+  #passes .buy-now a:hover {
+    color: #ef5185; }
+    ul
+{
+    list-style-type: none;
+
+}
+   strong
+{
+    color:#EEB4B4;
+   
+}
+
 
 
 /***TESTIMONIALS/OWL CAROUSEL GALLERY*****/
@@ -322,6 +476,7 @@ header nav .menu li a{
     margin: 0;
     display: block;
 }
+
 .blog-img img {
 	max-width: 100%;
     width: 100%;
@@ -536,7 +691,7 @@ header nav .menu li a{
 	position: relative;
 }
 #map_container map {
-	height: 400px !important;
+	height: 200px !important;
 }
 #map_container img { 
     max-width: none !important; 
@@ -555,10 +710,10 @@ header nav .menu li a{
 	letter-spacing: 2px;
 	position: absolute;
 	font-size: 14px;
-	font-family: 'Open sans',sans-serif;
-	top: 47%;
-    left: 47%;
-    color: #fff;
+	font-family: 'Josefin Sans', sans-serif;
+	top: 40%;
+    left: 40%;
+    color: #FFF;
     font-weight: 400;
     cursor: pointer;
 }
@@ -567,7 +722,7 @@ header nav .menu li a{
     top: 30%;
 }
 .cover-map {
-	background: rgba(0,0,0,0.9);
+	background: rgba(182,189,182, 0.8);
 	height: 100%;
 	width: 100%;
     position: absolute;	
@@ -603,7 +758,7 @@ header nav .menu li a{
 }
 .cover-map.map-active {
     height: 50px;
-    background: rgba(17,17,17, .75);
+    background: rgba(116,159,171, 0.8);
 }
 
 /***FOOTER****/

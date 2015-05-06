@@ -1,20 +1,9 @@
 [
-	{
-		"classDescription": "	Classes marked “Flow” will move with the breath from pose 
-													to pose and have a more dynamic pace (also known as Vinyasa Yoga). 
-													Our Hatha Yoga classes are instructional, insightful, and 
-													appropriate to your degree of yoga experience. The state of yoga is 
-													defined simply as having a one-pointed, focused mind. Hatha Yoga 
-													uses physical postures and other practices to find this state. 
-													A well-established practice with ancient roots, yoga is supported by 
-													modern science and embraced all over the globe.",
-		"classType": "Hatha Flow",											
-		"id": "all-levels-flow",
-		"level": "All",
-		"levelDescription": "	Intermediate // This blended class provides is a intelligent 
-		multi-level experience. Beginning with an opening focus and breath work, it moves on 
-		to flowing postures with plenty of opportunities to discover a peaceful edge and sense 
-		of adventure. A delicious dissolve culminates in savansana and meditation. Expect to 
-		cultivate a purifying heat in the body as you and leave inspired and alive"	
-	}
+    {
+        "classDescription": "Classes marked 'Flow' will move with the breath from pose to pose and have a more dynamic pace (also known as Vinyasa Yoga). Our Hatha Yoga classes are instructional, insightful, and appropriate to your degree of yoga experience. The state of yoga is defined simply as having a one-pointed, focused mind. Hatha Yoga uses physical postures and other practices to find this state. A well-established practice with ancient roots, yoga is supported by modern science and embraced all over the globe.",
+        "classType": "Hatha Flow",
+        "id": "all-levels-flow",
+        "level": "All",
+        "levelDescription": "Intermediate // This blended class provides is a intelligent multi-level experience. Beginning with an opening focus and breath work, it moves on to flowing postures with plenty of opportunities to discover a peaceful edge and sense of adventure. A delicious dissolve culminates in savansana and meditation. Expect to cultivate a purifying heat in the body as you and leave inspired and alive"
+    }
 ]

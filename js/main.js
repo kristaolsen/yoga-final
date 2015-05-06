@@ -1,8 +1,16 @@
 ﻿
-
 var app = angular.module('yogaSpa', [
-  'ngRoute', 'ngMap', 'ngAnimate'
+  'ngRoute',
+  'ngMap', 
+  'ngAnimate',
 ]);
+
+var yogaClassApp = angular.module('yogaClassApp', [
+    'ngRoute',
+    'yogaClassControllers',
+    'yogaClassFilters'
+]);
+
 
 /**
 * Configure the Routes for SPA Sections
@@ -14,11 +22,25 @@ app.config(['$routeProvider', function ($routeProvider) {
 
     // Pages
   
-     .when("/schedule", { templateUrl: "partials/schedule.html", controller: "PageCtrl" })
+     .when("/schedule", {
+         templateUrl: "partials/schedule.html", 
+         controller: "PageCtrl, AccordionCtrl, YogaClassCtrl"
+          })
 
-    .when("/experiences", { templateUrl: "partials/experiences.html", controller: "PageCtrl" })
-    .when("/blog", { templateUrl: "partials/blog.html", controller: "PageCtrl" })
-    .when("/contact", { templateUrl: "partials/contact.html", controller: "PageCtrl" })
+     .when("/experiences", { 
+         templateUrl: "partials/experiences.html", 
+         controller: "PageCtrl" 
+           })
+
+    .when("/blog", { 
+        templateUrl: "partials/blog.html", 
+        controller: "PageCtrl" 
+           })
+
+    .when("/contact", 
+        { templateUrl: "partials/contact.html", 
+        controller: "PageCtrl" 
+            })
 
 
     // else 404
@@ -61,6 +83,15 @@ app.directive('autoActive', ['$location', function ($location) {
         }
     }
 } ]);
+
+
+
+
+
+
+
+
+
 
 
 

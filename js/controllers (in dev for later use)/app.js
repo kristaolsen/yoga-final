@@ -3,9 +3,7 @@
 var yogaClassApp = angular.module('yogaClassApp', [
 	'ngRoute',
 	'yogaClassControllers',
-	'yogaClassFilters',
-	'google-maps',
-	'ui.bootstrap'
+	'yogaClassFilters'
 ]);
 
 yogaClassApp.config(['$routeProvider', '$locationProvider',
