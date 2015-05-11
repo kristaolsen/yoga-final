@@ -1,22 +1,19 @@
-'use strict';
-
-
-// Filter by studio
+/* Filter by studio */
 angular.module('yogaClassFilters', []).filter('studioFilter', function() {
 	return function(items, studios) {
 		var studioMatches = [];
 
 		angular.forEach(items, function(item) {
-			if(studios.hellsKitchen == false && studios.brooklyn == false) {
+			if(studios.midtown == false && studios.brooklyn == false) {
 				studioMatches.push(item);
 			}
-			else if(studios.hellsKitchen == true && studios.brooklyn == false && item.studio == 'HellsKitchen') {
+			else if(studios.midtown == true && studios.brooklyn == false && item.studio == 'Midtown') {
 				studioMatches.push(item);
 			}
-			else if(studios.hellsKitchen == false && studios.brooklyn == true && item.studio == 'Brooklyn') {
+			else if(studios.midtown == false && studios.brooklyn == true && item.studio == 'Brooklyn') {
 				studioMatches.push(item);
 			}
-			else if(studios.hellsKitchen == true && studios.Brooklyn == true) {
+			else if(studios.midtown == true && studios.brooklyn == true) {
 				studioMatches.push(item);
 			}
 		});

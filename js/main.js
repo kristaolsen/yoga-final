@@ -2,15 +2,8 @@
 var app = angular.module('yogaSpa', [
   'ngRoute',
   'ngMap', 
-  'ngAnimate',
+  'ngAnimate'
 ]);
-
-var yogaClassApp = angular.module('yogaClassApp', [
-    'ngRoute',
-    'yogaClassControllers',
-    'yogaClassFilters'
-]);
-
 
 /**
 * Configure the Routes for SPA Sections
@@ -24,12 +17,12 @@ app.config(['$routeProvider', function ($routeProvider) {
   
      .when("/schedule", {
          templateUrl: "partials/schedule.html", 
-         controller: "PageCtrl, AccordionCtrl, YogaClassCtrl"
+         controller: "PageCtrl, YogaClassCtrl"
           })
 
      .when("/experiences", { 
          templateUrl: "partials/experiences.html", 
-         controller: "PageCtrl" 
+         controller: "PageCtrl," 
            })
 
     .when("/blog", { 
@@ -53,8 +46,6 @@ app.controller('PageCtrl', function ( $scope/*, $location, $http */) {
     $scope.pageClass = 'page-effect';
 
 });
-
-
 
 
 //'use strict';
