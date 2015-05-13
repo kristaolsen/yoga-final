@@ -225,7 +225,8 @@ section#schedule {
   -ms-border-radius: 4px;
   border-radius: 4px;
   background-color: #81AFAD;
-     border-radius: 5px;
+    border-radius: 5px;
+    border-top: 1px dotted #FFF;
     border-bottom: 1px dotted #FFF;
   color: #fff;
   height: 100%;

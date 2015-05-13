@@ -1,12 +1,10 @@
-'use strict';
+
 // create our angular module and inject firebase
-var yogaClassApp = angular.module('yogaClassApp', ['firebase']) [
-	'ngRoute',
-	'yogaClassControllers',
-	'yogaClassFilters',
-	'firebase',
-	
-]);
+var yogaClassApp = angular.module("yogaClassApp", ["ngRoute","yogaClassControllers", "yogaClassFilters","firebase"])
+.constant('FIREBASE_URL', 'https://yogaspascheduler.firebaseio.com');
+
+var appControllers = angular.module("yogaClassControllers", []);
+
 /**
 * Configure the Routes for SPA Sections
 */

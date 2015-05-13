@@ -1,16 +1,15 @@
 // create our angular module and inject firebase
-var yogaClassControllers = angular.module('yogaClassControllers', ['firebase']);
-
+var yogaClassControllers = angular.module('yogaClassControllers', $scope, $firebaseArray, FIREBASE_URL);
 
 /*****************************************************************
 		Class Schedule Controller
 *****************************************************************/
 
 // create our main controller and get access to firebase
-yogaClassControllers.controller('YogaClassCtrl', function($scope, $firebase, $yogaClassFilters) {
+yogaClassControllers.controller('YogaClassCtrl', function($scope, $firebaseArray, FIREBASE_URL, $yogaClassFilters) {
 
 // connect to firebase 
-  	var ref = new Firebase("http://yogaspascheduler.firebaseIO.com/yogaclasses");  
+  	var ref = new Firebase(FIREBASE_URL+'/classes');
   	var fb = $firebase(ref);
 
 // sync as object 
@@ -25,7 +24,7 @@ yogaClassControllers.controller('YogaClassCtrl', function($scope, $firebase, $yo
 
 		yogaClassControllers.controller('YogaClassCtrl', ['$scope', '$http', 
 	function($scope, $http) {
-		$http.get('http://yogaspascheduler.firebaseIO.com/yogaclasses')success(function(data) { 
+		$http.get('http://yogaspascheduler.firebaseIO.com/classes')success(function(data) { 
 			$scope.classes = data;
 		});
 
