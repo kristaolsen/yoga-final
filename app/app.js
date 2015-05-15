@@ -6,38 +6,21 @@ var yogaClassApp = angular.module("yogaClassApp", ["ngRoute","yogaClassControlle
 var appControllers = angular.module("yogaClassControllers", []);
 
 /**
-* Configure the Routes for SPA Sections
+* Configure the Route for SPA Schedule Sections
 */
 yogaClassApp.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 		$routeProvider
-		// Home
-    .when("/", { 
-    	templateUrl: "partials/home.html", 
-    	controller: "PageCtrl" 
-    })
-
-    // Pages
+	
+    // Page
   
      .when("/schedule", {
          templateUrl: "partials/schedule.html", 
-         controller: "PageCtrl, YogaClassCtrl"
+         controller: "PageCtrl, YogaClassCtrl, AccordionCtrl"
           })
 
-     .when("/experiences", { 
-         templateUrl: "partials/experiences.html", 
-         controller: "PageCtrl" 
-           })
-
-    .when("/blog", { 
-        templateUrl: "partials/blog.html", 
-        controller: "PageCtrl" 
-           })
-
-    .when("/contact", 
-        { templateUrl: "partials/contact.html", 
-        controller: "PageCtrl" 
-            })
-	}
+    
 ]);
+
+
 
